@@ -1,0 +1,28 @@
+wx:
+  mp:
+    app-id: wx4878ee3e15559e66
+    secret: b7870920a94e8f3e37bfb12e332b5667
+    token: abcdef
+    config-storage:
+      type: jedis
+      key-prefix: wx
+      redis:
+        host: 43.138.11.236
+        port: 6379
+        password: yb1234567
+server:
+  port: 8081
+spring:
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  redis:
+    host: 43.138.11.236
+    port: 6379
+    password: yb1234567
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
